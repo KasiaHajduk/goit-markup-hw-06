@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        line-height: 1.5;
+        font-family: sans-serif;
+        background-color: #f9f9fd;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 24px;
+      }
+
+      .box {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #bdbdbd;
+        box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+          0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+          0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+        /* overflow: hidden; */
+      }
+
+      .box:hover .overlay {
+      transform: translatey(0);
+    }
+
+  
+      .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #3f51b5;
+        transform: translatey(100%);
+        transition: transform 2500ms ease;
+      }
+
+      .overlay > p {
+        color: #fff;
+        padding: 10px;
+        margin: 0;
+        font-size: 18px;
+      }
+
+      .overlay code {
+        display: block;
+        padding: 2px 4px;
+        border-radius: 2px;
+        background-color: #fff;
+        color: #2a2a2a;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Move the mouse over the square</h1>
+
+    <div class="box">
+      <img
+                    class="portfolio__item"
+                    src="./images/portf-2.jpg"
+                    alt="portf-2"
+                  />
+        <div class="overlay">
+        <p>
+          This content is hidden through transformation and only appears when
+          hovering over <code>div.box</code>
+        </p>
+        </div>
+    </div>
+    <p>sdfsdfsdfsdf Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit beatae laboriosam ratione dignissimos, et corporis numquam sequi natus, obcaecati aliquid hic pariatur nisi veniam, libero autem? Itaque officiis nam corporis?</p>
+  </body>
+</html>
