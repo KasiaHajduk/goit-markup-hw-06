@@ -46,8 +46,8 @@
           info@devstudio.com
         </a>
         <a class="header__phone-number link" href="tel:+48111111111">
-          <svg class="envelope">
-            <use href="./images/icons-defs.svg#icon-telephone"></use>
+          <svg class="telephone">
+            <use href="./images/icons.svg#icon-telephone"></use>
           </svg>
           +48 111 111 111
         </a>
@@ -71,8 +71,8 @@
             <li class="lorem__item">
               <div class="lorem__card">
                 <div class="lorem__svg">
-                  <svg class="radar">
-                    <use href="./images/icons.svg#icon-radar"></use>
+                  <svg class="antenna">
+                    <use href="./images/icons.svg#icon-antenna"></use>
                   </svg>
                 </div>
                 <h3 class="third-header">LOREM IPSUM</h3>
@@ -99,8 +99,8 @@
             <li class="lorem__item">
               <div class="lorem__card">
                 <div class="lorem__svg">
-                  <svg class="computer">
-                    <use href="./images/icons.svg#icon-computer"></use>
+                  <svg class="diagram">
+                    <use href="./images/icons.svg#icon-diagram"></use>
                   </svg>
                 </div>
                 <h3 class="third-header">LOREM IPSUM</h3>
@@ -113,8 +113,8 @@
             <li class="lorem__item">
               <div class="lorem__card">
                 <div class="lorem__svg">
-                  <svg class="cosmo">
-                    <use href="./images/icons.svg#icon-cosmo"></use>
+                  <svg class="astronaut">
+                    <use href="./images/icons.svg#icon-astronaut"></use>
                   </svg>
                 </div>
                 <h3 class="third-header">LOREM IPSUM</h3>
@@ -431,8 +431,8 @@
           </ul>
         </div>
 
-        <div class="footer__right_side">
-          <p class="join">dołącz do nas</p>
+        <div class="footer__center_side">
+          <p class="footer__title">dołącz do nas</p>
           <ul class="footer__social-list list">
             <li class="footer__social-list-item link">
               <a class="footer__social-list__link" href="#">
@@ -464,6 +464,11 @@
             </li>
           </ul>
         </div>
+        
+        <div class="footer__right-side">
+            <p class="footer__title">zapisz się do newslettera</p>
+        </div>
+
       </div>
     </footer>
 
@@ -475,14 +480,60 @@
     </div> -->
 
     <!--przycisk zamknięcia jako svg-->
-    <!-- <div class="backdrop is-hidden" data-modal> -->
-      <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
+      <!-- <div class="backdrop" data-modal> -->
       <div class="modal">
         <div class="close-btn-svg" data-modal-close>
           <svg class="svg-icon">
           <use  href="./images/icons2807.svg#icon-close"></use>
           </svg>
         </div>
+        <h2 class="modal__form-header">
+           Zostaw swoje dane w formularzu poniżej
+        </h2> 
+           <form action="#" class="modal__form">
+               <label for="" class="modal__form-field">
+                    Imie
+                    <span class="modal__form-input-wrapper">
+                        <input type="text" name="user_name" class="modal__form-input">
+                        <span class="modal__form-icon"></span>
+                    </span>
+                </label>
+    
+                <label for="" class="modal__form-field">
+                    Telefon
+                    <span class="modal__form-input-wrapper">
+                        <input type="tel" name="user_tel" class="modal__form-input">
+                        <span class="modal__form-icon"></span>
+                    </span>
+                </label>
+                
+                <label for="" class="modal__form-field">
+                    Email
+                    <span class="modal__form-input-wrapper">
+                        <input type="email" name="user_email" class="modal__form-input">
+                        <span class="modal__form-icon"></span>
+                    </span>
+                </label>
+
+                <label class="modal__form-field">
+                    Komentarz
+                    <textarea class="modal__form-message" name="user_message" placeholder="Wprowadź tekst">
+                    </textarea>
+                </label>
+                
+                <div class="modal__form-policy">
+                  <input type="checkbox" name="user_policy" value="accept_policy"
+                    class="modal__form-policy visually-hidden">
+                  <label class="modal__form-policy-text"> 
+                    Oświadczam, iż akceptuję <a href="#">Regulamin</a> i <a href="#">Politykę Prywatności.</a>
+                  </label>
+                </div>
+                
+                <button type="submit" class="modal__form-btn">
+                  Wyślij
+                </button>
+          </form>
       </div>
     </div>
 

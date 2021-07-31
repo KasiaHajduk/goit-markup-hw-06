@@ -59,7 +59,9 @@ img {
   line-height: 1.875;
   letter-spacing: 0.06em;
   color: #ffffff;
-  background-color: #2196f3;
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
+  border-radius: 4px;
   padding: 10px 42px;
 }
 
@@ -158,7 +160,7 @@ img {
   color: #757575;
   margin-left: 10px;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  align-items: flex-start;
+  /* align-items: flex-start; */
 }
 
 .header__phone-number:hover,
@@ -166,8 +168,8 @@ img {
 .header__phone-number:focus,
 .header__email:focus {
   color: var(--main-color);
-  stroke: var(--main-color);
-  stroke-width: 2px;
+  fill: var(--main-color);
+
 }
 .header__email {
   margin-left: 345px;
@@ -175,18 +177,24 @@ img {
 .header__phone-number {
   margin-left: 30px;
 }
-.envelope,
+.envelope{
+  width: 16px;
+  height: 16px;
+  fill: #757575;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .telephone {
   width: 16px;
-  height: 12px;
+  height: 16px;
+  fill: #757575;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .envelope:hover,
 .envelope:focus,
 .telephone:hover,
 .telephone:focus {
-  stroke: var(--main-color);
-  stroke-width: 2px;
+  fill: var(--main-color);
+  color: var(--main-color);
 }
 
 /*****END HEADER*****/
@@ -269,7 +277,7 @@ img {
   width: 270px;
 }
 
-.radar {
+.antenna {
   width: 65px;
   height: 70px;
 }
@@ -277,11 +285,11 @@ img {
   width: 67px;
   height: 70px;
 }
-.computer {
+.diagram {
   width: 70px;
   height: 54px;
 }
-.cosmo {
+.astronaut {
   width: 55px;
   height: 60px;
 }
@@ -520,7 +528,7 @@ img {
   color: var(--main-color);
 }
 
-.footer__right-side {
+.footer__center-side {
   width: 206px;
   height: 80px;
   display: flex;
@@ -528,7 +536,7 @@ img {
   /* align-items: flex-start;
   justify-content: space-between; */
 }
-.join {
+.footer__title {
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
@@ -568,6 +576,16 @@ img {
   color: #ffffff;
   background-color: var(--main-color);
 }
+
+.footer__right-side{
+  width: 570px;
+  height: 86px;
+  border: 1px solid #fff;
+  margin-left: 78px;
+}
+
+
+
 
 /*****  SECOND   *****/
 .second {
@@ -622,7 +640,6 @@ img {
 .portfolio__list {
   display: flex;
   flex-wrap: wrap;
-  flex-container: wrap;
 }
 
 .portfolio__card-wrapper {
@@ -714,6 +731,10 @@ img {
 }
 
 /******  END PORTFOLIO   *****/
+
+
+/***** MODAL *****/
+
 .backdrop {
   position: fixed;
   left: 0;
@@ -776,3 +797,189 @@ img {
 .is-hidden .modal {
   transform: rotate(90deg);
 }
+
+
+/***   BACKDROP***/
+.backdrop{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 528px;
+    min-height: 581px;
+    background-color: #fff;
+    padding: 40px;
+}
+
+.close-btn{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    height: 30px;
+    width: 30px;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+.is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.modal__form-header{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.72;
+    letter-spacing: 0.03em;
+    color: #212121;
+    margin-bottom: 12px;
+}
+
+.modal__form{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.modal__form-field{
+    font-size: 12px;
+    line-height: 1.166;
+    letter-spacing: 0.01em;
+    color: #757575;
+    margin-bottom: 10px;
+}
+
+.modal__form-input-wrapper{
+    position: relative;
+    display: block;
+    margin-top: 4px;
+}
+
+.modal__form-input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__form-input:focus{
+    outline: none;
+    border-color: var(--main-color);
+}
+
+.modal__form-input:focus + .modal__form-icon{
+    background-color: var(--main-color);
+}
+
+.modal__form-icon{
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    background-color: teal;
+    display: block;
+    width: 18px;
+    height: 18px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__form-message{
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__form-message::placeholder{
+    color: rgba(117, 117, 117, 0,5);
+}
+
+.modal__form-message:focus{
+    outline:none;
+    border-color: var(--main-color); 
+}
+
+.modal__form-policy{
+  margin: 0 auto;
+   margin-bottom: 30px;
+}
+.modal__form-policy-text{
+    font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+    color: #757575;
+   
+}
+
+.modal__form-policy-text a{
+  color: var(--main-color);
+}
+
+.modal__form-policy-text::before{
+    display: inline-block;
+    content: ""; 
+    width: 16px;
+    height: 16px;
+    border: 1px solid #212121;
+    border-radius: 2px;
+}
+
+
+.modal__form-policy:checked + .modal__form-policy-text::before{
+    background-color: var(--main-color);
+    border: 3px solid #fff;
+    background-image: url(../images/vector.svg);
+}
+
+.modal__form-btn{
+    display: block;
+    width: 200px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    padding: 10px 76px;
+    color: #ffffff;
+    background: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    margin: 0 auto;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal__form-btn:hover,
+.modal__form-btn:focus{
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.visually-hidden{
+    position: absolute !important;
+    clip: rct(1px 1px 1px 1px);
+    clip:rect(1pz, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+/***   END BACKDROP***/
