@@ -304,7 +304,6 @@ img {
 
 /***** GALERY  ****/
 .gallery .container {
-  min-height: 386px;
   margin-bottom: 94px;
 }
 .gallery__header {
@@ -319,6 +318,7 @@ img {
 .gallery__list {
   display: flex;
   justify-content: space-between;
+  min-height: 294px;
 }
 
 .gallery__item-photo {
@@ -525,10 +525,8 @@ img {
   width: 206px;
   height: 80px;
   display: flex;
-
-  /* align-items: flex-start;
-  justify-content: space-between; */
 }
+
 .footer__title {
   font-weight: bold;
   font-size: 14px;
