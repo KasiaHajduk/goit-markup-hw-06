@@ -304,8 +304,8 @@ img {
 
 /***** GALERY  ****/
 .gallery .container {
+  min-height: 386px; 
   margin-bottom: 94px;
-  min-height: 294px;
 }
 .gallery__header {
   font-size: 36px;
