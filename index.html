@@ -412,7 +412,7 @@
       
 
     </main>
-    <footer class="footer section">
+    <footer class="footer ">
       <div class="container">
         <div class="footer__left-side">
           <a class="navigation-logo link" href="index.html">Web<span style="color: #ffffff">Studio</span></a>
@@ -471,12 +471,11 @@
             <label for="" class="footer__form-field">
               <input type="email" name="user_email" placeholder="E-mail" class="footer__form-input">
             </label>
-            <button type="submit" >
-                           Zapisz się
+            <button type="submit" class="footer__form-btn">
+                  <span>Zapisz się</span>
                 <svg class="footer__send-icon">
                   <use href="./images/icons.svg#icon-send"></use>
                 </svg>
-             
             </button>
           </form>
         </div>
@@ -512,7 +511,7 @@
       <div class="modal">
         <div class="close-btn-svg" data-modal-close>
           <svg class="svg-icon">
-          <use  href="./images/icons2807.svg#icon-close"></use>
+          <use  href="./images/icons.svg#icon-close"></use>
           </svg>
         </div>
         <h2 class="modal__form-header">
@@ -564,17 +563,15 @@
                     </textarea>
                 </label>
                 
-                <div class="modal__form-policy">
-                  <input type="checkbox" name="user_policy" value="accept_policy"
+                <input id="user-policy" type="checkbox" name="user_policy" value="accept_policy"
                     class="modal__form-policy visually-hidden">
-                  <label class="modal__form-policy-text"> 
+                <label for="user-policy" class="modal__form-policy-text"> 
                     Oświadczam, iż akceptuję <a href="#">Regulamin</a> i <a href="#">Politykę Prywatności.</a>
-                  </label>
-                </div>
-                
+                </label>
                 <button type="submit" class="modal__form-btn">
                   Wyślij
                 </button>
+           
           </form>
       </div>
     </div>
