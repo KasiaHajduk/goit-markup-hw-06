@@ -257,7 +257,7 @@
        
     </main>
 
-    <footer class="footer section">
+    <footer class="footer ">
       <div class="container">
         <div class="footer__left-side">
           <a class="navigation-logo link" href="index.html">Web<span style="color: #ffffff">Studio</span></a>
@@ -276,8 +276,8 @@
           </ul>
         </div>
 
-        <div class="footer__right_side">
-          <p class="join">dołącz do nas</p>
+        <div class="footer__center_side">
+          <p class="footer__title">dołącz do nas</p>
           <ul class="footer__social-list list">
             <li class="footer__social-list-item link">
               <a class="footer__social-list__link" href="#">
@@ -309,7 +309,23 @@
             </li>
           </ul>
         </div>
+        
+        <div class="footer__right-side">
+          <p class="footer__title">zapisz się do newslettera</p>
+          <form action="#" class="footer__form">
+            <label for="" class="footer__form-field">
+              <input type="email" name="user_email" placeholder="E-mail" class="footer__form-input">
+            </label>
+            <button type="submit" class="footer__form-btn">
+                  <span>Zapisz się</span>
+                <svg class="footer__send-icon">
+                  <use href="./images/icons.svg#icon-send"></use>
+                </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
+    
   </body>
 </html>
