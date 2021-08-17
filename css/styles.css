@@ -515,7 +515,8 @@ img {
 }
 
 .address__link:focus,
-.address__link:hover .footer__link:focus,
+.address__link:hover,
+.footer__link:focus,
 .footer__link:hover {
   color: var(--main-color);
 }
