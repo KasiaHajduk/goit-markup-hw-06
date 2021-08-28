@@ -893,6 +893,7 @@ a:focus {
   padding-top: 12px;
   padding-left: 16px;
   margin-top: 4px;
+  margin-bottom: 10px;
 }
 
 .modal__form-message::placeholder {
@@ -916,32 +917,46 @@ a:focus {
   color: var(--main-color);
 }
 
+
+.modal__form-policy{
+  margin: 10px auto;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
 .modal__form-policy-text {
+  align-items: center;
+  display: flex;
+  margin: 0 auto;
+}
+
+
+.modal__form-text {
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: #757575;
-  margin: 0 auto;
-  margin-bottom: 30px;
+  margin-left: 8px;
 }
 
 .modal__form-policy-text::before {
   display: inline-block;
   content: "";
-  width: 16px;
-  height: 16px;
-  border: 1px solid #212121;
+  width: 14px;
+  height: 13px;
+  border: 2px solid #212121;
   border-radius: 2px;
 }
 
-.modal__form-policy:checked + .modal__form-policy-text::before {
+.modal__form-policy-checked:checked + .modal__form-policy-text::before {
   background-color: var(--main-color);
-  border: 1px solid var(--main-color);
+  border: 2px solid var(--main-color);
   border-radius: 2px;
   background-image: url(../images/icons-check.svg);
-  background-size: 16px 16px;
+  background-size: 14px 13px;
   background-position: center;
 }
+
 
 .modal__form-btn {
   display: block;
@@ -956,7 +971,9 @@ a:focus {
   border: 1px solid var(--main-color);
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  margin: 0 auto;
+  margin: auto;
+  margin-top: 30px;
+
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal__form-btn:hover,
